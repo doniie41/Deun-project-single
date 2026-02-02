@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> 과제_grid-temolate-areas </title>
+    <style>
+        *{
+            padding: 0;
+            margin: 0;
+            box-sizing: border-box;
+        }
+
+        .devil{
+           width: 600px;
+           height: 800px;
+           margin: 30px;
+           display: grid;
+           grid-template-columns: repeat(3, 1fr);
+           grid-template-areas:  
+           "chain1 chain1 chain2"
+           "chain3 chain4 chain2"
+           "chain3 chain4 chain2"
+           "chain5 chain4 chain6"
+           "chain5 chain7 chain7"
+           ;
+        }
+
+        .devil div{
+            background-position: center;
+            margin: 10px;
+        }
+
+        .chain1{
+            background: url(../images/chain01.jpg) no-repeat;
+            background-size: cover;  
+            grid-area: chain1;
+        }
+        .chain2{
+            background: url(../images/chain02.jpg) no-repeat;
+            background-size: cover;  
+            grid-area: chain2;
+        }
+        .chain3{
+            background: url(../images/chain03.jpg) no-repeat;
+            background-size: cover;  
+            grid-area: chain3;
+        }
+        .chain4{
+            background: url(../images/chain04.jpg) no-repeat;
+            background-size: cover;  
+            grid-area: chain4;
+        }
+        .chain5{
+            background: url(../images/chain05.jpg) no-repeat;
+            background-size: cover;  
+            grid-area: chain5;
+        }
+        .chain6{
+            background: url(../images/chain06.jpg) no-repeat;
+            background-size: cover;  
+            grid-area: chain6;
+        }
+        .chain7{
+            background: url(../images/chain07.jpg) no-repeat;
+            background-size: cover;  
+            grid-area: chain7;
+        }
+        .chain8{
+            background: url(../images/chain08.jpg) no-repeat;
+            background-size: cover;  
+            grid-area: chain8;
+        }
+    </style>
+</head>
+<body>
+ <div class="devil">
+    <div class="chain1"> </div>
+    <div class="chain2"> </div>
+    <div class="chain3"> </div>
+    <div class="chain4"> </div>
+    <div class="chain5"> </div>
+    <div class="chain6"> </div>
+    <div class="chain7"> </div>
+    <div class="chain8"> </div>
+ </div>
+</body>
+</html>
