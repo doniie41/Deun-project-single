@@ -147,11 +147,14 @@
        /* 스크롤 버튼 줄일때 안뜨게 */
        scrollbar-width: none;
        }
+       .nf-cards::-webkit-scrollbar {
+       display: none;
+       }
 
        .nf-card {
        position: relative;
        display: block;
-       min-width: 10px;
+       min-width: 150px;
        border-radius: 10px;
        overflow: hidden;
        text-decoration: none;
@@ -253,7 +256,7 @@
 
       /* 그 외 꾸미기 .... */
       .projects,
-      .Music,
+      .music,
       .info {
       border: 1.5px solid #e0e0e0;
       border-radius: 24px;
@@ -417,7 +420,7 @@
    </section>
 
 <!------------ 3번 페이지 ------------->
-    <section id="Music" class="Music">
+    <section id="music" class="music">
     <h1>My Music Taste 🎧</h1>
 
   <div class="genre-list">
@@ -479,8 +482,8 @@
       <li>Vivaldi - The Four Seasons</li>
       <li>Niccolo Paganini - La campanrlla</li>
       <li>Debussy - Clair de Lune</li>
-    </ul>
-   </div>
+     </ul>
+    </div>
 
     <!-- OST -->
     <div class="genre">
@@ -491,8 +494,8 @@
       <li>Joe Hisaishi - Summer</li>
       <li>Hans Zimmer - Time</li>
       <li>Ryuichi Sakamoto - Merry Christmas Mr. Lawrence</li>
-   </ul>
-  </div>
+     </ul>
+   </div>
 
   </div>
 </section>
