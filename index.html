@@ -110,23 +110,114 @@
        .genre li {
        margin-bottom: 6px;
        }
-      /* 5 페이지 */
+      
+       /* 4 페이지 */
+       .netflix {
+       background: #000;
+       color: #fff;
+       padding: 80px 20px;
+       }
+
+       .nf-title {
+       margin: 0 0 30px;
+       font-size: 32px;
+       text-align: left;
+       max-width: 1100px;
+       margin-left: auto;
+       margin-right: auto;
+       }
+
+       .nf-row, .nf-reasons {
+       max-width: 1100px;
+       margin: 0 auto 50px;
+       text-align: left;
+       }
+
+       .nf-row-title {
+       margin: 0 0 16px;
+       font-size: 22px;
+       }
+
+       /* 추천작 줄 */
+       .nf-cards {
+       display: flex;
+       gap: 16px;
+       overflow-x: auto;        /* 스크롤 버튼은 나중에 */
+       padding-bottom: 10px;
+       }
+
+       .nf-card {
+       position: relative;
+       display: block;
+       min-width: 180px;
+       border-radius: 10px;
+       overflow: hidden;
+       text-decoration: none;
+       }
+
+       .nf-card img {
+       width: 100%;
+       display: block;
+       transition: transform 0.2s ease;  /* hover 애니메이션 */
+       }
+
+       .nf-card:hover img {
+       transform: scale(1.06);
+       }
+
+       .nf-rank {
+       position: absolute;
+       left: 8px;
+       bottom: 8px;
+       font-size: 64px;
+       font-weight: 900;
+       color: rgba(255,255,255,0.9);
+       text-shadow: 0 6px 18px rgba(0,0,0,0.7);
+       }
+
+       /* 가입 이유 카드 4개 */
+       .nf-reason-cards {
+       display: grid;
+       grid-template-columns: repeat(4, 1fr);
+       gap: 16px;
+       }
+
+       .nf-reason {
+       background: #161616;
+       border-radius: 16px;
+       padding: 18px;
+       min-height: 160px;
+       }
+
+       .nf-reason h3 {
+       margin: 0 0 10px;
+       font-size: 16px;
+       }
+
+       .nf-reason p {
+       margin: 0;
+       color: #bdbdbd;
+       font-size: 13px;
+       line-height: 1.4;
+       }
+       
+       /* 5 페이지 */
       .info {
       padding: 40px;
       text-align: center;
       }
 
-     .info h1 {
+      .info h1 {
      font-size: 36px;
      margin-bottom: 20px;
      }
 
-    .info p {
+      .info p {
     font-size: 18px;
     margin: 6px 0;
     }
 
-    .info a {
+      .info a {
     color: #333;
     text-decoration: none;
     font-weight: bold;
@@ -177,7 +268,7 @@
         <li> <a href="#home">Home</a> </li>
         <li> <a href="#projects">Projects</a> </li>
         <li> <a href="#Music">Music</a> </li>
-
+        <li><a href="#netflix">Netflix</a></li>
         <li> <a href="#info">Info</a> </li>
         <li> <a href="#ending">Ending</a> </li>
       </ul>
@@ -271,6 +362,68 @@
 </section>
 
 <!------------ 4 페이지 ------------->
+   <section id="netflix" class="netflix"> 
+    <h1 class="nf-title">Deun's Recommend</h1>
+
+  <!-- 추천작(지금 뜨는 콘텐츠) -->
+  <div class="nf-row">
+    <h2 class="nf-row-title">Deun's Recommendations</h2>
+
+    <div class="nf-cards">
+      <!-- 카드 5개 (이미지 + 순위) -->
+       <a class="nf-card" href="#" target="_blank">
+      <span class="nf-rank">1</span>
+      <img src="images/netflix02.jpg" width="150" height="220" alt="추천 1">
+     </a>
+
+      <a class="nf-card" href="#" target="_blank">
+      <span class="nf-rank">2</span>
+      <img src="images/netflix03.jpg" width="150" height="220" alt="추천 2">
+     </a>
+
+     <a class="nf-card" href="#" target="_blank">
+     <span class="nf-rank">3</span>
+     <img src="images/netflix04.jpg" width="150" height="220" alt="추천 3">
+     </a>
+
+     <a class="nf-card" href="#" target="_blank">
+     <span class="nf-rank">4</span>
+     <img src="images/netflix05.jpg" width="150" height="220" alt="추천 4">
+     </a>
+
+     <a class="nf-card" href="#" target="_blank">
+     <span class="nf-rank">5</span>
+     <img src="images/netflix06.jpg" width="150" height="220" alt="추천 5">
+     </a>
+  </div>
+
+  <!-- 가입해야 하는 또 다른 이유 -->
+  <div class="nf-reasons">
+    <h2 class="nf-row-title">가입해야 하는 또 다른 이유</h2>
+
+    <div class="nf-reason-cards">
+     <!-- 이유 카드 4개 -->
+     <div class="nf-reason">
+     <h3>TV로 즐기세요</h3>
+     <p>스마트 TV, PlayStation, Xbox, Chromecast, Apple TV, 블루레이 플레이어 등 다양한 디바이스에서 시청하세요.</p>
+     </div>
+
+     <div class="nf-reason">
+     <h3>즐겨 보는 콘텐츠를 저장해 오프라인으로 시청하세요</h3>
+     <p>간편하게 저장하고 빈틈없이 즐겨보세요.</p>
+     </div>
+
+     <div class="nf-reason">
+     <h3>다양한 디바이스로 시청하세요</h3>
+     <p>각종 영화와 시리즈를 스마트폰, 태블릿, 노트북, TV에서 무제한으로 스트리밍하세요.</p>
+     </div>
+
+     <div class="nf-reason">
+     <h3>어린이 전용 프로필을 만들어 보세요</h3>
+     <p>자기만의 공간에서 좋아하는 캐릭터와 즐기는 신나는 모험. 자녀에게 이 특별한 경험을 선물하세요. 넷플릭스 회원이라면 무료입니다.</p>
+     </div>
+ </div>
+</section>
 
 <!------------ 5 페이지 ------------->
    <section id="info" class="info">
