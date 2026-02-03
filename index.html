@@ -31,12 +31,12 @@
         color: whitesmoke;
         font-weight: bold;
         } 
-        /* section 123 */
+        /* section */
         section {
         padding: 80px 20px;
         text-align: center;
         }
-        /* 1 페이지 */
+        /* 시작 페이지 */
         .kuma{
           background-image: url(images/kuma.jpg);
           background-repeat: no-repeat;
@@ -82,7 +82,7 @@
         /* 3 페이지 */
         .genre-list {
         display: grid;
-        grid-template-columns: repeat(2, 1fr); /* ⭐ 한 줄에 두 장르 */
+        grid-template-columns: repeat(2, 1fr); 
         gap: 40px;
         max-width: 900px;
         margin: 40px auto 0;
@@ -110,7 +110,34 @@
        .genre li {
        margin-bottom: 6px;
        }
-      /* 4 페이지 */
+      /* 5 페이지 */
+      .info {
+      padding: 60px 40px;
+      text-align: center;
+      border: 1.5px solid #e0e0e0;
+      border-radius: 24px;
+      margin: 80px 40px;
+      box-shadow: 0 8px 24px rgba(0,0,0,0.06);
+      background-color: #f9f9f9;
+      }
+
+     .info h1 {
+     font-size: 36px;
+     margin-bottom: 20px;
+     }
+
+    .info p {
+    font-size: 18px;
+    margin: 6px 0;
+    }
+
+    .info a {
+    color: #333;
+    text-decoration: none;
+    font-weight: bold;
+    }
+
+      /* 마무리 페이지 */
        .ending {
        background-image: url(images/kuma02.jpg);
        background-repeat: no-repeat;
@@ -137,7 +164,7 @@
        }
       /* 그 외 꾸미기 .... */
       .projects,
-      .contents {
+      .Music {
       border: 1.5px solid #e0e0e0;
       border-radius: 24px;
       margin: 80px 40px;
@@ -148,14 +175,18 @@
 
 </head>
 <body>
+<!------------ nav 바 ------------->
     <nav>
       <ul class="nav-menu">
         <li> <a href="#home">Home</a> </li>
         <li> <a href="#projects">Projects</a> </li>
-        <li> <a href="#contents">Contents</a> </li>
+        <li> <a href="#Music">Music</a> </li>
+
+        <li> <a href="#info">Info</a> </li>
+        <li> <a href="#ending">Ending</a> </li>
       </ul>
     </nav>
-<!------------ 1번 페이지 ------------->
+<!------------ 시작 페이지 ------------->
     <section id="home" class="kuma">
         <h1>Hae Deun's Portfolio</h1>
         <p>저의 포트폴리오를 발표합니다! (｡･∀･)ﾉﾞ</p>
@@ -187,7 +218,7 @@
    </section>
 
 <!------------ 3번 페이지 ------------->
-    <section id="contents" class="contents">
+    <section id="Music" class="Music">
     <h1>My Music Taste 🎧</h1>
 
      <div class="genre-list">
@@ -243,7 +274,17 @@
   </div>
 </section>
 
-<!------------ 4번 페이지 ------------->
+<!------------ 4 페이지 ------------->
+
+<!------------ 5 페이지 ------------->
+   <section id="info" class="info">
+    <h1>Contact Me 📞</h1>
+    <p>Phone: 010-5255-2128</p>
+    <p>Email: lebeatrice@naver.com</p>
+    <p>GitHub: <a href="https://github.com/doniie41" target="_blank">https://github.com/doniie41</a></p>
+</section>
+
+<!------------ 마무리 페이지 ------------->
    <section id="ending" class="ending">
    <div class="ending-inner">
     <h1>Thank You</h1>
@@ -252,5 +293,4 @@
 </section> 
 
 </body>
-
 </html>
