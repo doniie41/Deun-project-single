@@ -142,14 +142,16 @@
        .nf-cards {
        display: flex;
        gap: 16px;
-       overflow-x: auto;        /* 스크롤 버튼은 나중에 */
+       overflow-x: auto;        
        padding-bottom: 10px;
+       /* 스크롤 버튼 줄일때 안뜨게 */
+       scrollbar-width: none;
        }
 
        .nf-card {
        position: relative;
        display: block;
-       min-width: 180px;
+       min-width: 10px;
        border-radius: 10px;
        overflow: hidden;
        text-decoration: none;
@@ -186,7 +188,7 @@
        background: #161616;
        border-radius: 16px;
        padding: 18px;
-       min-height: 160px;
+       min-height: 200px;
        }
 
        .nf-reason h3 {
@@ -199,8 +201,8 @@
        color: #bdbdbd;
        font-size: 13px;
        line-height: 1.4;
-       }
-       
+      }
+
        /* 5 페이지 */
       .info {
       padding: 40px;
@@ -248,6 +250,7 @@
        font-size: 20px;
        line-height: 1.6;
        }
+
       /* 그 외 꾸미기 .... */
       .projects,
       .Music,
@@ -258,6 +261,87 @@
       padding: 60px 40px;
       box-shadow: 0 8px 24px rgba(0, 0, 0, 0.06);
       }
+         
+      /* project 반응형 */
+       /* 1) Projects: 화면 좁아지면 가로 → 세로로 내려가게 */
+       @media (max-width: 900px) {
+       .project-list {
+       flex-wrap: wrap;          
+       justify-content: center;
+       }
+
+       .project-card {
+        width: 220px;             
+       }
+      }
+
+       /* 2) 더 좁아지면 Projects 카드 1줄(세로)로 */
+       @media (max-width: 520px) {
+       .project-list {
+       flex-direction: column;
+       align-items: center;
+       }
+
+       .project-card {
+       width: 90%;
+       max-width: 320px;
+       height: auto;             
+       }
+      }
+
+     /* music 반응형 */
+     /* 1) Music(genre-list): 2열 → 1열로 */
+       @media (max-width: 900px) {
+       .genre-list {
+       grid-template-columns: 1fr;  /* 한 줄에 하나씩 */
+       }
+
+       .genre {
+       text-align: center;          /* 모바일에서 보기 좋게 */
+       }
+
+       .genre ul {
+       display: inline-block;       /* 가운데 정렬 느낌 */
+       text-align: left;            /* 글은 왼쪽 정렬 유지 */
+       }
+      }
+
+     /* netflix 반응형 */
+      /* 1) 추천작: 화면이 좁아지면 카드 크기 살짝 줄이고 스크롤 유지 */
+     @media (max-width: 900px) {
+     .nf-card { min-width: 160px; }
+     .nf-rank { font-size: 54px; }
+     }
+
+     /* 2) 가입 이유: 4칸 → 2칸 */
+     @media (max-width: 900px) {
+     .nf-reason-cards {
+     grid-template-columns: repeat(2, 1fr);
+     }
+     }
+
+     /* 3) 더 좁아지면: 2칸 → 1칸, 패딩도 줄이기 */
+     @media (max-width: 520px) {
+     .netflix {
+     padding: 60px 14px;
+     }
+
+     .nf-title {
+     font-size: 26px;
+     }
+
+     .nf-row-title {
+     font-size: 18px;
+     }
+
+     .nf-card { min-width: 140px; }
+     .nf-rank { font-size: 46px; }
+
+     .nf-reason-cards {
+      grid-template-columns: 1fr;
+     }
+     }
+
     </style>
 
 </head>
@@ -371,27 +455,27 @@
 
     <div class="nf-cards">
       <!-- 카드 5개 (이미지 + 순위) -->
-       <a class="nf-card" href="#" target="_blank">
+      <a class="nf-card" href="https://youtu.be/49_44FFKZ1M?si=AJiZOqoszHziyB5S" target="_blank">
       <span class="nf-rank">1</span>
       <img src="images/netflix02.jpg" width="150" height="220" alt="추천 1">
      </a>
 
-      <a class="nf-card" href="#" target="_blank">
+      <a class="nf-card" href="https://youtu.be/yef_HfQoBd8?si=I6Ue5Be2zq8GIq_H" target="_blank">
       <span class="nf-rank">2</span>
       <img src="images/netflix03.jpg" width="150" height="220" alt="추천 2">
      </a>
 
-     <a class="nf-card" href="#" target="_blank">
+     <a class="nf-card" href="https://youtu.be/65xa8TG2G8o?si=LkkAz-nZKbcRjWnW" target="_blank">
      <span class="nf-rank">3</span>
      <img src="images/netflix04.jpg" width="150" height="220" alt="추천 3">
      </a>
 
-     <a class="nf-card" href="#" target="_blank">
+     <a class="nf-card" href="https://youtu.be/MaJ7ZT70ve4?si=9k3gt4Cls7xfTc_w" target="_blank">
      <span class="nf-rank">4</span>
      <img src="images/netflix05.jpg" width="150" height="220" alt="추천 4">
      </a>
 
-     <a class="nf-card" href="#" target="_blank">
+     <a class="nf-card" href="https://youtu.be/7rI56NmD33Y?si=ZSsryRfnSo2XQaUi" target="_blank">
      <span class="nf-rank">5</span>
      <img src="images/netflix06.jpg" width="150" height="220" alt="추천 5">
      </a>
