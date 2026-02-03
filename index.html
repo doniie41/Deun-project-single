@@ -342,6 +342,34 @@
      }
      }
 
+     /* 맨 위로 버튼 (시작 페이지로 #home) */
+     html {
+     scroll-behavior: smooth; /* 부드럽게 이동 */
+     }
+
+     .to-top {
+     position: fixed;
+     right: 20px;
+     bottom: 20px;
+
+     background: #333;
+     color: white;
+     text-decoration: none;
+     font-weight: bold;
+
+     padding: 12px 14px;
+     border-radius: 999px;
+
+     box-shadow: 0 6px 18px rgba(0,0,0,0.2);
+     opacity: 0.85;
+     transition: 0.2s;
+     }
+
+     .to-top:hover {
+     opacity: 1;
+     transform: translateY(-2px);
+     }
+
     </style>
 
 </head>
@@ -392,7 +420,7 @@
     <section id="Music" class="Music">
     <h1>My Music Taste 🎧</h1>
 
-     <div class="genre-list">
+  <div class="genre-list">
 
     <!-- JPOP -->
     <div class="genre">
@@ -442,6 +470,33 @@
         <li>Ella Fitzgerald - Dream a Little Dream</li>
       </ul>
     </div>
+
+    <!-- CLASSIC -->
+    <div class="genre">
+     <a href="https://youtu.be/97_VJve7UVc?si=kM0t1QR0rnRA_3Ry" target="_blank">
+     <img src="images/lune.jpg" alt="Classic 앨범">
+     </a>
+    <h2>CLASSIC</h2>
+     <ul>
+      <li>Vivaldi - The Four Seasons</li>
+      <li>Niccolo Paganini - La campanrlla</li>
+      <li>Debussy - Clair de Lune</li>
+    </ul>
+   </div>
+
+    <!-- OST -->
+    <div class="genre">
+     <a href="https://youtu.be/1OZDaRhHHyM?si=5Sx3y-ae0rmpgErc" target="_blank">
+     <img src="images/Mr.Law.jpg" alt="OST 앨범">
+     </a>
+    <h2>OST</h2>
+     <ul>
+      <li>Joe Hisaishi - Summer</li>
+      <li>Hans Zimmer - Time</li>
+      <li>Ryuichi Sakamoto - Merry Christmas Mr. Lawrence</li>
+   </ul>
+  </div>
+
   </div>
 </section>
 
@@ -524,6 +579,7 @@
     <p>발표를 마치겠습니다.<br>감사합니다 ( •̀ ω •́ )y</p>
   </div>
 </section> 
-
+<!-- 맨 위로 올리기 버튼 -->
+  <a href="#home" class="to-top">⬆️ Top</a>
 </body>
 </html>
