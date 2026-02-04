@@ -24,11 +24,16 @@ body{
         color: whitesmoke;
         font-weight: bold;
         } 
+        .nav-menu a:hover {
+          border-bottom: 2px solid whitesmoke;
+        }
+
         /* section */
         section {
         padding: 80px 20px;
         text-align: center;
         }
+
         /* 시작 페이지 */
         .kuma{
           background-image: url(images/kuma.jpg);
@@ -43,6 +48,7 @@ body{
           align-items: center;
           text-align: center;
         }
+
         /* 2 페이지 */
         .projects {
         padding: 40px;
@@ -63,6 +69,12 @@ body{
         width: 200px;
         height: 170px;
         box-shadow: 0 4px 10px #333;
+
+        transition: 0.2s;
+        }
+
+        .project-card:hover {
+          transform: translateY(-6px);
         }
 
         .project-card a {
@@ -72,6 +84,7 @@ body{
         color: #333;
         font-weight: bold;
         }
+
         /* 3 페이지 */
         .genre-list {
         display: grid;
@@ -90,6 +103,12 @@ body{
        max-width: 200px;
        border-radius: 12px;
        margin-bottom: 10px;
+
+       transition: 0.2s;
+       }
+
+       .genre img:hover {
+        transform: scale(1.05);
        }
 
        .genre h2 {
@@ -140,6 +159,7 @@ body{
        /* 스크롤 버튼 줄일때 안뜨게 */
        scrollbar-width: none;
        }
+
        .nf-cards::-webkit-scrollbar {
        display: none;
        }
@@ -330,8 +350,11 @@ body{
      font-size: 18px;
      }
 
-     .nf-card { min-width: 140px; }
-     .nf-rank { font-size: 46px; }
+     .nf-card { 
+      min-width: 140px; }
+
+     .nf-rank { 
+      font-size: 46px; }
 
      .nf-reason-cards {
       grid-template-columns: 1fr;
