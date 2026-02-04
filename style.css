@@ -86,6 +86,7 @@ body{
         }
 
         /* 3 페이지 */
+         /* musuc 은 grid 이용, 장르 2개가 한줄 오게!! */
         .genre-list {
         display: grid;
         grid-template-columns: repeat(2, 1fr); 
@@ -221,8 +222,18 @@ body{
 
        /* 5 페이지 */
       .info {
-      padding: 40px;
-      text-align: center;
+      /* padding: 40px;
+      text-align: center; */
+
+      position: relative;
+      overflow: hidden;
+      }
+
+      .info-imgs {
+        display: flex;
+        justify-content: center;
+        gap: 40px;
+        margin-bottom: 20px;
       }
 
       .info h1 {
@@ -231,8 +242,8 @@ body{
      }
 
       .info p {
-    font-size: 18px;
-    margin: 6px 0;
+      font-size: 18px;
+      margin: 6px 0;
     }
 
       .info a {
@@ -240,6 +251,42 @@ body{
     text-decoration: none;
     font-weight: bold;
     }
+
+     /* kuma 이미지들 좌 하양 우 갈색 들어오는 애니메이션 */
+     .kumawhite{
+      /* position: absolute;
+      top: 40px;
+      left: 25%;  텍스트랑 분리 */ 
+      animation: kumawhite 2s ease-out forwards;
+     }
+     
+     .kumabrown{
+      /* position: absolute;
+      top: 40px;
+      right: 25%; 텍스트랑 분리 */
+      animation: kumabrown 2s ease-out forwards;
+      /* animation-delay: 0.15s; 브라운쿠마 더 늦게 나오기 살짝 어색 */
+     }
+
+      @keyframes kumawhite{
+        from{
+              transform: translateX(-300px);
+              opacity: 0;
+        }to{
+               transform: translateX(0);
+               opacity: 1;  
+        }
+      }
+
+      @keyframes kumabrown{
+         from{
+             transform: translateX(300px);
+             opacity: 0;
+        }to{
+             transform: translateX(0);
+             opacity: 1;
+        }
+      }
 
       /* 마무리 페이지 */
        .ending {
